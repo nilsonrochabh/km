@@ -1,5 +1,5 @@
 var displayName =  document.getElementById('displayName');
-var database = firebase.database().ref().child('km');
+var database = firebase.database().ref().child('Dados');
 
 
 database.once('value', function(snapshot){
@@ -8,11 +8,11 @@ database.once('value', function(snapshot){
         
         snapshot.forEach(function(data){
           
-            var name = data.val().name;
-            var date= data.val().date;
-            var km_inicial = data.val().km_inicial;
+            var name = data.val().nome;
+            var date= data.val().data;
+            var km_inicial = data.val().km_Inicial;
             var rota = data.val().rota;
-            var km_final = data.val().km_final;
+            var km_final = data.val().km_Final;
 
             content = '<tr>';
         
